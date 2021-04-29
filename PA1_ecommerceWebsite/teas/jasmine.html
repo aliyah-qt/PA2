@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.jpeg">
+    <title>Jasmine Milk Tea</title>
+</head>
+<header>
+  <h1 class="boba-header">Unoriginal Boba Store</h1>
+
+    <div class="navbar-container">
+
+      <a class="navbar" href="../index.html">Home</a>
+      <a class="navbar" href="../team.html">The Team</a>
+      <a class="navbar" href="../menu.html">Menu</a>
+
+
+    </div>
+</header>
+<body>
+  <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">JASMINE MILK TEA</h2>
+
+  <div class="prod-container">
+    <div class="prod-item">
+      <div class="prod-view">
+        <!-- more images -->
+        <img src="../images/jasmine.jpeg" alt="jasmine milk tea">
+        <img src="../images/jasmine2.jpeg" alt="jasmine milk tea">
+        <p style="font-weight: bold; font-size: 20px;"> $4.75</p>
+        <!-- detailed description -->
+        <p>Our Jasmine tea brewed in house has floral notes
+          <br> which adds to the delicate taste of this drink.
+          <br>
+          It is sweetened with syrup, sugar, and creamer and topped
+          <br>
+          off with fresh honey boba (tapioca balls).
+        </p>
+
+      </div>
+    </div>
+    <div class="prod-item">
+      <!-- order form -->
+      <form name="PurchaseOrderForm"
+        onsubmit="return validateForm()"
+        action="mailto:anteater@uci.edu?subject=Purchase%20Order%20Information"
+        method="POST"
+        enctype="text/plain">
+
+        <fieldset>
+          <legend>Purchase Order Form</legend>
+          <br>
+          <div class="form-container">
+            <div class="form-item">
+
+              <label for="pid">Product Identifier:</label><br>
+              <select name="Product Identifier" id="pid" required>
+              <option value="Select">Select</option>
+              <option value="Black Milk Tea">Black Milk Tea</option>
+              <option value="Coffee Milk Tea">Coffee Milk Tea</option>
+              <option value="Earl Grey Milk Tea">Earl Grey Milk Tea</option>
+              <option value="Jasmine Milk Tea">Jasmine Milk Tea</option>
+              <option value="Mango Lychee Tea">Mango Lychee Tea</option>
+              <option value="Oolong Milk Tea">Oolong Milk Tea</option>
+              <option value="Panda Milk Tea">Panda Milk Tea</option>
+              <option value="Peach Green Tea">Peach Green Tea</option>
+              <option value="Taro Milk Tea">Taro Milk Tea</option>
+              <option value="Thai Iced Tea">Thai Iced Tea</option>
+              </select>
+              <br>
+              <br>
+              <label for="sugar">Sugar Level:</label><br>
+              <select name="Sugar Level" id="sugar" required>
+              <option value="Select">Select</option>
+              <option value="100% Regular Sweet">100% Regular Sweet</option>
+              <option value="75% Sweet">75% Sweet</option>
+              <option value="50% Sweet">50% Sweet</option>
+              <option value="25% Sweet">25% Sweet</option>
+              <option value="No Sweet">No Sweet</option>
+
+              </select>
+              <br>
+              <br>
+
+              <label for="qty">Quantity:</label><br>
+              <input type="number" id="qty" name="Quantity" min="1" max="5" required><br>
+
+              <br>
+
+              <label for="fname">First Name:</label><br>
+              <input type="text" id="fname" maxlength="32" name="First Name" pattern="[A-Za-z]{1,32}" required><br>
+
+              <br>
+
+              <label for="lname">Last Name:</label><br>
+              <input type="text" id="lname" maxlength="32" name="Last Name" pattern="[A-Za-z]{1,32}" required><br>
+
+              <br>
+
+              <label for="phone">Phone Number:</label><br>
+              <input type="tel" id="phone" name="Phone Number" placeholder="i.e. 123-456-7891" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
+              <br>
+              <label for="ship_addr"><u>Shipping Address Information</u></label><br>
+              <label for="addr">Street:</label><br>
+              <input type="text" id="addr" name="Address Line 1" placeholder="i.e. 1234 W Irvine Drive" required><br><br>
+              <label for="addr">Apt/Suite/Bldg:</label><br>
+              <input type="text" id="addr2" name="Address Line 2" placeholder="i.e. Apt 4"><br><br>
+
+
+
+            </div><!-- class form item -->
+            <div class="form-item">
+              <label for="city">City:</label><br>
+                <input type="text" id="city" name="City" required><br><br>
+
+              <label for="state">State:</label><br>
+                <input type="text" id="state" name="State" size="5" pattern="[A-Z]{2,2}" placeholder="i.e. CA" required><br><br>
+
+              <label for="zip_code">Zip Code:</label><br>
+                <input type="text" id="zip_code" name="Zip Code" pattern="[0-9]{5,5}" title="Zip code should be exactly 5 digits. e.g. 92801" required>
+
+              <br>
+              <br>
+
+              <label for="ship_method">Shipping Method:</label><br>
+              <input type="radio" id="overnight" name="Shipping Method" value="Overnight" required>
+              <label for="overnight">Overnight</label><br>
+
+              <input type="radio" id="2day" name="Shipping Method" value="2day" required>
+              <label for="2day">2-day expedited</label><br>
+
+              <input type="radio" id="6day" name="Shipping Method" value="6day" required>
+              <label for="6day">6-days ground</label><br>
+
+              <br>
+
+              <label for="credit_card"><u>Credit Card Information</u></label><br>
+              <label for="card_num">Card Number:</label><br>
+              <input type="text" id="card_num" name="Card Number" pattern="[0-9]{13,16}" title="Credit card number should be between 13 and 16 digits." required><br><br>
+
+              <label for="expiry1">Expiry Date:</label><br>
+              <select id="expiry1" name="Expiration Month">
+                <option value="January">01</option>
+                <option value="February">02</option>
+                <option value="March">03</option>
+                <option value="April">04</option>
+                <option value="May">05</option>
+                <option value="June">06</option>
+                <option value="July">07</option>
+                <option value="August">08</option>
+                <option value="September">09</option>
+                <option value="October">10</option>
+                <option value="November">11</option>
+                <option value="December">12</option>
+              </select>
+
+              <select id="expiry2" name="Expiration Year">
+                <option value="2021">21</option>
+                <option value="2022">22</option>
+                <option value="2023">23</option>
+                <option value="2024">24</option>
+                <option value="2025">25</option>
+                <option value="2026">26</option>
+                <option value="2027">27</option>
+                <option value="2028">28</option>
+                <option value="2029">29</option>
+                <option value="2030">30</option>
+              </select>
+
+              <br>
+              <br>
+
+              <label for="sCode">Security Code:</label><br>
+              <input type="text" id="sCode" name="Security Code" size="4" pattern="[0-9]{3,4}" required><br><br>
+
+              <br>
+
+              <input type="submit" value="Submit">
+
+            </div>
+          </div>
+
+        </fieldset>
+        </form>
+    </div>
+  </div>
+
+  <footer>
+  <br>
+    <p> 123 Alameda Street, Oakland, CA 94601</p>
+    <p>HOURS: 9AM-9PM DAILY</p>
+  <p >© 2021 POWERED BY THE UNORGINAL BOBA STORE</p>
+
+
+  </footer>
+
+</body>
+
+<!-- Runs form validation code from external JS file -->
+<script src="../teas/form_validation.js"></script>
+
+</html>
