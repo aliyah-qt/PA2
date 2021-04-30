@@ -1,4 +1,4 @@
-package com.example.FirstApp;
+package com.example.PA2;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,6 +26,7 @@ public class ProductDetailsServlet extends HttpServlet {
         String tea=request.getParameter("Product Identifier");
 
         if(tea.equals("Black Milk Tea")){
+            System.out.println("sample");
             RequestDispatcher rd=request.getRequestDispatcher("black.html");
             rd.forward(request, response);
         }
