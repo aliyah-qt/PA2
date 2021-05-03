@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.jpeg">
+
+  <title>Coffee Milk Tea</title>
+
+  <script src="form_validation.js"></script>
+</head>
+
+
+<header>
+  <h1 class="boba-header">Unoriginal Boba Store</h1>
+
+  <div class="navbar-container">
+
+    <a class="navbar" href="index.html">Home</a>
+    <a class="navbar" href="about.html">About Us</a>
+    <a class="navbar" href="team.html">The Team</a>
+
+  </div>
+</header>
+
+
+<body>
+<div class="prod-container">
+  <div class="prod-item">
+    <div class="prod-view">
+
+      <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">COFFEE MILK TEA</h2>
+
+      <!-- more images -->
+      <img src="coffee.jpeg" alt="coffee milk tea">
+      <img src="coffee2.jpeg" alt="coffee milk tea">
+      <p style="font-weight: bold; font-size: 20px;"> $4.75</p>
+      <!-- detailed description -->
+      <p>Hong Kong style milk tea with slanted coffee jelly.
+        <br>Part of our rotating specials hand-bottled
+        <br>
+        and ready for your fridge!</p>
+    </div>
+  </div>
+
+  <form action="./CheckoutServlet" method="post">
+    <input type="submit" name="button" value="Add Coffee Milk Tea to Cart">
+  </form>
+</div>
+</body>
+
+<footer>
+  <br>
+  <p> 123 Alameda Street, Oakland, CA 94601</p>
+  <p>HOURS: 9AM-9PM DAILY</p>
+  <p >© 2021 POWERED BY THE UNORGINAL BOBA STORE</p>
+</footer>
+
+</html>
